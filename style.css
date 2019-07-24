@@ -1,0 +1,297 @@
+/*
+Theme Name:   Divi for We Sell
+Description:  Copyright 2019 Charles Muzonzini. All rights reserved.
+Author:       Charles Muzonzini
+Author URL:   http://www.muzonzini.com
+Template:     Divi
+Version:      1.0
+Text Domain:  divi-for-we-sell
+*/
+
+/*  */
+
+.et_header_style_stacked.et_hidecart_secondary_nav #top-header #et-secondary-menu .et-cart-info {
+    display: none;
+}
+
+.et_header_style_stacked.et_condense_right_secondary_nav #top-header>div,
+.et_header_style_stacked.et_condense_left_secondary_nav #top-header>div {
+    -webkit-display: flex;
+    display: flex;
+}
+
+.et_header_style_stacked.et_condense_right_secondary_nav #top-header>div {
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+}
+
+.et_header_style_stacked.et_condense_left_secondary_nav #top-header>div {
+    justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+}
+
+.et_header_style_stacked.et_condense_left_secondary_nav #et-secondary-menu,
+.et_header_style_stacked.et_condense_right_secondary_nav #et-secondary-menu {
+    margin-left: 15px;
+}
+
+.et_header_style_stacked #main-header .container {
+    margin-top: 15px;
+    -webkit-transition: margin .5s ease-in-out;
+    -moz-transition: margin .5s ease-in-out;
+    -o-transition: margin .5s ease-in-out;
+    transition: margin .5s ease-in-out;
+}
+
+.et_header_style_stacked #main-header .container .tn-logo-and-secondary-menu-container {
+    -webkit-transition: margin .5s ease-in-out;
+    -moz-transition: margin .5s ease-in-out;
+    -o-transition: margin .5s ease-in-out;
+    transition: margin .5s ease-in-out;
+    margin-bottom: 15px;
+}
+
+.et_header_style_stacked #main-header .logo_container {
+    margin: 15px 0px;
+    -webkit-transition: margin .5s ease-in-out;
+    -moz-transition: margin .5s ease-in-out;
+    -o-transition: margin .5s ease-in-out;
+    transition: margin .5s ease-in-out;
+    float: left;
+}
+
+.et_header_style_stacked #main-header {
+    top: 0px !important;
+}
+
+.et_header_style_stacked #top-header {
+    top: unset;
+    right: unset;
+    left: unset;
+    position: unset;
+    padding: 5px 0px 0px 20px;
+    width: 100% !important;
+}
+
+.et_header_style_stacked #top-header-container {
+    overflow: auto;
+}
+
+.et_header_style_stacked #et-top-navigation {
+    float: left;
+    margin-top: 12px;
+}
+
+.et_header_style_stacked .tn_primary_menu {
+    margin: 20px 0px;
+    -webkit-transition: margin .5s ease-in-out;
+    -moz-transition: margin .5s ease-in-out;
+    -o-transition: margin .5s ease-in-out;
+    transition: margin .5s ease-in-out;
+}
+
+.et_header_style_stacked .tn_primary_menu .et-cart-info {
+    margin-right: 15px;
+    float: right;
+    display: flex;
+    height: auto;
+    align-items: center;
+}
+
+.et_header_style_stacked .tn_primary_menu .et-cart-info span {
+    background-color: orange;
+    padding: 7px 20px;
+    color: white;
+}
+
+.et_header_style_stacked .tn_primary_menu .et-cart-info span:before {
+    content: ""
+}
+
+.et_header_style_stacked .tn_primary_menu .et-cart-info #tn-cart-icon::after {
+    content: "\e07a";
+    margin-left: 20px;
+    color: orange;
+    font-size: x-large;
+    text-shadow: 0 0;
+    font-family: ETmodules !important;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1;
+    text-transform: none;
+    speak: none;
+}
+
+.et_header_style_stacked #top-header-container .et-search-form button#searchsubmit_header {
+    display: none;
+}
+
+.et_header_style_stacked #top-header-container .et-search-form {
+    float: right;
+    position: initial;
+    width: 50% !important;
+    max-width: 500px !important;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 7px;
+    -webkit-transition: margin .5s ease-in-out;
+    -moz-transition: margin .5s ease-in-out;
+    -o-transition: margin .5s ease-in-out;
+    transition: margin .5s ease-in-out;
+}
+
+.et_header_style_stacked #top-header-container .et-search-form .tn-search-label {
+    padding: 0px 20px;
+    color: white;
+    border-right: 1px solid white;
+    text-transform: uppercase;
+}
+
+.et_header_style_stacked #top-header-container .et-search-form input.et-search-field {
+    font-size: 14px;
+    padding: 5px 0px;
+    box-sizing: border-box;
+    position: initial;
+    color: white;
+    width: inherit;
+}
+
+.et_header_style_stacked.et_vertical_nav #main-header #top-header-container {
+    display: none;
+}
+
+.et_header_style_stacked.et_vertical_nav #main-header .logo_container {
+    margin: auto !important;
+}
+
+.et_header_style_stacked.et_vertical_nav #main-header .et-cart-info {
+    display: none;
+}
+
+/* .et_header_style_stacked #page-container {
+    padding-top: 0px;
+} */
+
+#tn-stacked-menu-container,
+.et_header_style_stacked #main-header>.et_menu_container,
+.et_header_style_stacked #page-container>#top-header {
+    display: none;
+}
+
+.et_header_style_stacked #tn-stacked-menu-container {
+    display: block;
+}
+
+.et_header_style_stacked #top-header-container #tn-search-form-container {
+    padding-left: 5px;
+    margin: 12px 0px;
+    -webkit-transition: margin .5s ease-in-out;
+    -moz-transition: margin .5s ease-in-out;
+    -o-transition: margin .5s ease-in-out;
+    transition: margin .5s ease-in-out;
+}
+
+.et_header_style_stacked #main-header.et-fixed-header #top-header-container #tn-search-form-container {
+    margin: 3px 0px;
+}
+
+.et_header_style_stacked #main-header.et-fixed-header .logo_container {
+    margin: 5px 0px;
+}
+
+.et_header_style_stacked #main-header.et-fixed-header .tn_primary_menu {
+    margin: 0px;
+}
+
+.et_header_style_stacked #main-header.et-fixed-header .container {
+    margin-top: 5px;
+}
+
+.et_header_style_stacked #main-header.et-fixed-header .container .tn-logo-and-secondary-menu-container {
+    margin-bottom: 5px;
+}
+
+.et_header_style_stacked #main-header.et-fixed-header #top-header-container .et-search-form {
+    margin-top: 0px;
+}
+
+body.admin-bar.et_fixed_nav.et_header_style_stacked #main-header {
+    top: 32px !important;
+}
+
+@media all and (max-width:479px) {
+
+    .et_header_style_stacked #main-header>div {
+        width: auto;
+        margin-top: 0px;
+    }
+
+    .et_header_style_stacked #main-header .logo_container {
+        padding: 5px 0px;
+        box-sizing: border-box;
+        width: 20%;
+        margin: 0px;
+    }
+
+    .et_header_style_stacked #main-header #top-header-container {
+        overflow: initial;
+        float: right;
+        width: 80%;
+        box-sizing: border-box;
+        padding: 0px 5px;
+    }
+
+    .et_header_style_stacked #top-header {
+        padding: 0px;
+    }
+
+    .et_header_style_stacked #top-header-container #tn-search-form-container {
+        padding-left: 5px;
+        margin: 0px 0px;
+    }
+
+    .et_header_style_stacked #top-header-container .et-search-form {
+        width: auto !important;
+        float: none;
+        margin-top: 0px;
+    }
+
+    .et_header_style_stacked #top-header-container .et-search-form .tn-search-label {
+        padding: 0px 3px;
+    }
+
+    .et_header_style_stacked #top-header-container .et-search-form input.et-search-field {
+        width: 65%;
+    }
+
+    .et_header_style_stacked #tn-stacked-menu-container>div {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .et_header_style_stacked .tn_primary_menu {
+        padding-left: 10px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .et_header_style_stacked #main-header .container .tn-logo-and-secondary-menu-container {
+        margin-bottom: 0px;
+        padding-top: 5px;
+    }
+
+    .et_header_style_stacked #et-top-navigation {
+        float: left;
+        margin: 3px 0px;
+    }
+
+    .et_header_style_stacked #main-content .container {
+        padding-top: 0px !important;
+    }
+
+}
