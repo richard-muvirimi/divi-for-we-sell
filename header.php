@@ -54,14 +54,15 @@
 
 		$et_slide_header = 'slide' === et_get_option('header_style', 'left') || 'fullscreen' === et_get_option('header_style', 'left') ? true : false;
 
-		/*Richard Muvirimi Added*/
-	
-		$et_stacked_header = 'stacked' === et_get_option('header_style', 'left');
+$tn_stacked_header='stacked' === et_get_option('header_style', 'left');
+
 		?>
 
-        <?php if (($et_top_info_defined && !$et_slide_header && !$et_stacked_header || is_customize_preview())  ) : ?>
+        <?php if (($et_top_info_defined && !$et_slide_header || is_customize_preview())  ) : ?>
         <?php ob_start(); ?>
-        <div id="top-header" <?php echo $et_top_info_defined ? '' : 'style="display: none;"'; ?>>
+
+        <!--Richard Muvirimi edited #top-header-->
+        <div id="top-header" <?php echo $et_top_info_defined && !$tn_stacked_header  ? '' : 'style="display: none;"'; ?>>
             <div class="container clearfix">
 
                 <?php if ($et_contact_info_defined) : ?>
@@ -281,7 +282,8 @@
                         <!--top menu-->
                         <?php ob_start(); ?>
                         <div id="top-header-container">
-                            <div id="top-header" <?php echo $et_top_info_defined ? '' : 'style="display: none;"'; ?>>
+                            <div id="top-header"
+                                <?php echo $et_top_info_defined ? '' : 'style="display: none;"'; ?>>
                                 <div class="clearfix">
 
                                     <?php if ($et_contact_info_defined) : ?>
@@ -355,7 +357,7 @@
                                     <?php
 						printf(
 							'<label class="tn-search-label" for="s">%1$s</label>
-							<input type="search" class="et-search-field" value="%2$s" name="s" title="%3$s" />',
+							<input type="search" class="et-search-field" value="%2$s" name="s" title="%3$s" id="s" />',
 							esc_attr__('Search', 'Divi'),
 							get_search_query(),
 							esc_attr__('Search for:', 'Divi')
@@ -436,14 +438,14 @@
                         <?php	tn_show_cart_total(); ?>
 
                     </div>
-                    <hr>
+
                 </div> <!-- .container -->
             </div> <!-- tn-stacked-menu-container -->
 
             <?php endif; ?>
             <!--//Richard Muvirimi Added-->
 
-
+            <?php if ('stacked' !== et_get_option('header_style', 'left') || is_customize_preview()) : ?>
             <div class="container clearfix et_menu_container">
                 <?php
 					$logo = ($user_logo = et_get_option('divi_logo')) && !empty($user_logo)
@@ -550,6 +552,8 @@
                     <span class="et_close_search_field"></span>
                 </div>
             </div>
+
+            <?php endif; ?>
 
         </header> <!-- #main-header -->
         <?php

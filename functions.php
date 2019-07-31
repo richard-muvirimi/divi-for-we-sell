@@ -13,9 +13,15 @@ function divi_for_we_sell_enqueue_child_styles()
 	$parent_style = 'parent-style';
 	wp_enqueue_style($parent_style, get_template_directory_uri() . '/style.css');
 	wp_enqueue_style(
-		'child-style',
+		'tn-child-style',
 		get_stylesheet_directory_uri() . '/style.css',
 		array($parent_style),
+		wp_get_theme()->get('Version')
+	);
+	wp_enqueue_style(
+		'tn-child-style-two',
+		get_stylesheet_directory_uri() . '/css/style.css',
+		array('tn-child-style'),
 		wp_get_theme()->get('Version')
 	);
 }
