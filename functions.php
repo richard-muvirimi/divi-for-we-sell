@@ -13,15 +13,9 @@ function divi_for_we_sell_enqueue_child_styles()
 	$parent_style = 'parent-style';
 	wp_enqueue_style($parent_style, get_template_directory_uri() . '/style.css');
 	wp_enqueue_style(
-		'tn-child-style',
+		'child-style',
 		get_stylesheet_directory_uri() . '/style.css',
 		array($parent_style),
-		wp_get_theme()->get('Version')
-	);
-	wp_enqueue_style(
-		'tn-child-style-two',
-		get_stylesheet_directory_uri() . '/css/style.css',
-		array('tn-child-style'),
 		wp_get_theme()->get('Version')
 	);
 }
@@ -172,17 +166,30 @@ function tn_show_cart_total($args = array())
 	);
 }
 
-function tn_enqueue_scripts()
+function divi_for_we_sell_enqueue_child_scripts()
 {
 
 	$parent_style = 'customiser-parent-style';
 	wp_enqueue_script($parent_style, get_template_directory_uri() . 'js/theme-customizer-controls.js');
 	wp_enqueue_script(
 		'tn-script',
-		get_stylesheet_directory_uri() . '/js/tn_script.js',
+		get_stylesheet_directory_uri() . '/js/tn_script_customiser.js',
 		array($parent_style, 'jquery'),
 		wp_get_theme()->get('Version')
 	);
 }
 
-add_action('customize_controls_enqueue_scripts', 'tn_enqueue_scripts');
+add_action('customize_controls_enqueue_scripts', 'divi_for_we_sell_enqueue_child_scripts');
+
+function tn_enqueue_scripts()
+{
+
+	wp_enqueue_script(
+		'tn-script',
+		get_stylesheet_directory_uri() . '/js/tn_script.js',
+		array('jquery'),
+		wp_get_theme()->get('Version')
+	);
+}
+
+add_action('wp_enqueue_scripts', 'tn_enqueue_scripts');
